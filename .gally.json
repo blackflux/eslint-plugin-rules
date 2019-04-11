@@ -2,7 +2,7 @@
   "defaultBranch": "master",
   "contribBranch": "dev",
   "repository": {
-    "url": "https://github.com/blackflux/eslint-plugin-blackflux.git"
+    "url": "https://github.com/blackflux/eslint-plugin-rules.git"
   },
   "branches": {
     "dev": {
