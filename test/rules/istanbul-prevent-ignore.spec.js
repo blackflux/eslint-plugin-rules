@@ -1,8 +1,9 @@
+const path = require('path');
 const RuleTester = require('eslint').RuleTester;
 const rule = require('../../src/rules/istanbul-prevent-ignore');
 
 const tester = new RuleTester({
-  parser: 'babel-eslint',
+  parser: path.join(__dirname, '..', '..', 'node_modules', 'babel-eslint'),
   parserOptions: {}
 });
 
