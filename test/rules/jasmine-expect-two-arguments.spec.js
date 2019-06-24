@@ -1,10 +1,5 @@
-const RuleTester = require('eslint').RuleTester;
 const rule = require('../../src/rules/jasmine-expect-two-arguments');
-
-const tester = new RuleTester({
-  parser: 'babel-eslint',
-  parserOptions: {}
-});
+const tester = require('./rule-tester');
 
 tester.run('jasmine-expect-two-arguments', rule, {
   valid: [

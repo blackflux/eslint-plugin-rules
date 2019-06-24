@@ -1,10 +1,5 @@
-const RuleTester = require('eslint').RuleTester;
 const rule = require('../../src/rules/istanbul-prevent-ignore');
-
-const tester = new RuleTester({
-  parser: 'babel-eslint',
-  parserOptions: {}
-});
+const tester = require('./rule-tester');
 
 tester.run('istanbul-prevent-ignore', rule, {
   valid: [
