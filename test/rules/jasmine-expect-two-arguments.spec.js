@@ -1,11 +1,5 @@
-const path = require('path');
-const RuleTester = require('eslint').RuleTester;
 const rule = require('../../src/rules/jasmine-expect-two-arguments');
-
-const tester = new RuleTester({
-  parser: path.join(__dirname, '..', '..', 'node_modules', 'babel-eslint'),
-  parserOptions: {}
-});
+const tester = require('./rule-tester');
 
 tester.run('jasmine-expect-two-arguments', rule, {
   valid: [
