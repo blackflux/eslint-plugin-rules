@@ -42,15 +42,15 @@
     "@babel/core": "7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",
     "@babel/register": "7.5.5",
-    "@blackflux/eslint-plugin-rules": "1.0.23",
-    "@blackflux/robo-config-plugin": "2.2.3",
+    "@blackflux/eslint-plugin-rules": "1.1.4",
+    "@blackflux/robo-config-plugin": "2.4.6",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
-    "coveralls": "3.0.5",
+    "coveralls": "3.0.6",
     "eslint": "6.1.0",
-    "js-gardener": "2.0.56",
+    "js-gardener": "2.0.66",
     "nyc": "14.1.1",
-    "semantic-release": "15.13.19"
+    "semantic-release": "15.13.21"
   },
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
@@ -95,6 +95,6 @@
     "lib"
   ],
   "dependencies": {
-    "smart-fs": "1.9.2"
+    "smart-fs": "1.9.5"
   }
 }

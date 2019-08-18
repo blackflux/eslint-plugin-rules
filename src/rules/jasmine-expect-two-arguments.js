@@ -1,5 +1,5 @@
 module.exports = {
-  create: context => ({
+  create: (context) => ({
     CallExpression: (node) => {
       if (node.callee.name === 'expect') {
         // checking "expect()" arguments

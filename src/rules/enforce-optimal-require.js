@@ -1,6 +1,6 @@
 const path = require('path');
 
-const isStaticRequire = node => node
+const isStaticRequire = (node) => node
     && node.callee
     && node.callee.type === 'Identifier'
     && node.callee.name === 'require'
