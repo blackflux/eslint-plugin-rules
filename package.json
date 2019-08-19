@@ -75,5 +75,5 @@
   ],
   "engines": {"node": ">= 8.10"},
   "files": ["lib"],
-  "dependencies": {"smart-fs": "1.9.5"}
+  "dependencies": {"smart-fs": "1.9.6"}
 }
