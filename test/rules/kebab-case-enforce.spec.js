@@ -6,6 +6,16 @@ tester.run('kebab-case-enforce', rule, {
     {
       filename: 'my-component.js',
       code: ''
+    },
+    {
+      // ignore json files
+      filename: 'MyComponent.json',
+      code: ''
+    },
+    {
+      // ignore json files
+      filename: 'my_component.json',
+      code: ''
     }
   ],
   invalid: [

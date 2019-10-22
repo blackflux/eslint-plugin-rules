@@ -2,10 +2,14 @@ const path = require('path');
 
 module.exports = {
   create: (context) => {
-    const filePath = path.relative(process.cwd(), context.getFilename());
+    const fileName = context.getFilename();
+    const filePath = path.relative(process.cwd(), fileName);
 
     return {
       Program() {
+        if (fileName.endsWith('.json')) {
+          return;
+        }
         if (filePath !== filePath.toLowerCase()) {
           context.report({
             loc: { start: { line: 0, column: 0 } },
