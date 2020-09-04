@@ -8,6 +8,7 @@
       "packageName": "@blackflux/eslint-plugin-rules",
       "projectName": "eslint-plugin-rules",
       "owner": "simlu",
+      "nodeVersion": "10",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux"
     }
