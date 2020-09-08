@@ -53,8 +53,8 @@
     "eslint-plugin-json": "2.1.2",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "8.0.0",
-    "js-gardener": "2.0.167",
-    "node-tdd": "2.18.3",
+    "js-gardener": "2.0.168",
+    "node-tdd": "2.18.4",
     "nyc": "15.1.0",
     "semantic-release": "17.1.1",
     "babel-preset-latest-node": "4.1.0"
@@ -102,6 +102,6 @@
     "lib"
   ],
   "dependencies": {
-    "smart-fs": "1.11.16"
+    "smart-fs": "1.11.17"
   }
 }
