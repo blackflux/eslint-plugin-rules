@@ -102,6 +102,6 @@
     "lib"
   ],
   "dependencies": {
-    "smart-fs": "1.12.0"
+    "smart-fs": "1.12.1"
   }
 }
