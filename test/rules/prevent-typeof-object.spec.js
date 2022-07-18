@@ -1,6 +1,11 @@
 import rule from '../../src/rules/prevent-typeof-object.js';
 import tester from './rule-tester.js';
 
+const message = (
+  'Please use "obj?.constructor === Object" or "obj instanceof Object" '
+  + 'instead of `typeof obj === "object"`'
+);
+
 tester.run('prevent-typeof-object', rule, {
   valid: [
     'typeof {} === "string"',
@@ -8,28 +13,22 @@ tester.run('prevent-typeof-object', rule, {
     'typeof {} === {}',
     'car instanceof Car',
     'true && false',
+    'new String() instanceof Object',
+    'new String() instanceof Array',
     '!true'
   ],
   invalid: [
     {
       code: 'typeof {} === "object"',
-      errors: ['Please use "obj?.constructor === Object" instead of `typeof obj === "object"`']
+      errors: [message]
     },
     {
       code: '"object" === typeof {}',
-      errors: ['Please use "obj?.constructor === Object" instead of `typeof obj === "object"`']
-    },
-    {
-      code: 'new String() instanceof Object',
-      errors: ['Please use "obj?.constructor === Object" instead of `obj instanceof Object`']
-    },
-    {
-      code: 'new String() instanceof Array',
-      errors: ['Please use "obj?.constructor === Object" instead of `obj instanceof Object`']
+      errors: [message]
     },
     {
       code: 'typeof {} === `object`',
-      errors: ['Please use "obj?.constructor === Object" instead of `typeof obj === "object"`']
+      errors: [message]
     }
   ]
 });
