@@ -1,26 +1,34 @@
-const rule = require('../../src/rules/prevent-typeof-object');
-const tester = require('./rule-tester');
+import rule from '../../src/rules/prevent-typeof-object.js';
+import tester from './rule-tester.js';
+
+const message = (
+  'Please use "obj?.constructor === Object" or "obj instanceof Object" '
+  + 'instead of `typeof obj === "object"`'
+);
 
 tester.run('prevent-typeof-object', rule, {
   valid: [
     'typeof {} === "string"',
     'typeof {} > "object"',
-    'new String() instanceof Object',
     'typeof {} === {}',
+    'car instanceof Car',
+    'true && false',
+    'new String() instanceof Object',
+    'new String() instanceof Array',
     '!true'
   ],
   invalid: [
     {
       code: 'typeof {} === "object"',
-      errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
+      errors: [message]
     },
     {
       code: '"object" === typeof {}',
-      errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
+      errors: [message]
     },
     {
       code: 'typeof {} === `object`',
-      errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
+      errors: [message]
     }
   ]
 });

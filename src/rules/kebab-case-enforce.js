@@ -1,6 +1,6 @@
-const path = require('path');
+import path from 'path';
 
-module.exports = {
+export default {
   create: (context) => {
     const fileName = context.getFilename();
     const filePath = path.relative(process.cwd(), fileName);

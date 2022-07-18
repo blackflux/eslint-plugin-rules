@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   create(context) {
     return {
       UnaryExpression(node) {
@@ -13,7 +13,10 @@ module.exports = {
               if (value === 'object') {
                 context.report({
                   node: sibling,
-                  message: 'Please use "instanceof Object" instead of "typeof" to check for Object'
+                  message: (
+                    'Please use "obj?.constructor === Object" or "obj instanceof Object" '
+                    + 'instead of `typeof obj === "object"`'
+                  )
                 });
               }
             }

@@ -1,5 +1,5 @@
-const rule = require('../../src/rules/istanbul-prevent-ignore');
-const tester = require('./rule-tester');
+import rule from '../../src/rules/istanbul-prevent-ignore.js';
+import tester from './rule-tester.js';
 
 tester.run('istanbul-prevent-ignore', rule, {
   valid: [
