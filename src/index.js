@@ -1,10 +1,13 @@
-const path = require('path');
-const sfs = require('smart-fs');
+import c8PreventIgnore from './rules/c8-prevent-ignore.js';
+import istanbulPreventIgnore from './rules/istanbul-prevent-ignore.js';
+import kebabCaseEnforce from './rules/kebab-case-enforce.js';
+import preventTypeofObject from './rules/prevent-typeof-object.js';
 
-module.exports = {
-  rules: sfs
-    .walkDir(path.join(__dirname, 'rules'))
-    .reduce((p, f) => Object.assign(p, {
-      [f.slice(0, -3)]: sfs.smartRead(path.join(__dirname, 'rules', f))
-    }), {})
+export default {
+  rules: {
+    'c8-prevent-ignore': c8PreventIgnore,
+    'istanbul-prevent-ignore': istanbulPreventIgnore,
+    'kebab-case-enforce': kebabCaseEnforce,
+    'prevent-typeof-object': preventTypeofObject
+  }
 };

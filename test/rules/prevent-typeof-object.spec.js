@@ -1,5 +1,5 @@
-const rule = require('../../src/rules/prevent-typeof-object');
-const tester = require('./rule-tester');
+import rule from '../../src/rules/prevent-typeof-object.js';
+import tester from './rule-tester.js';
 
 tester.run('prevent-typeof-object', rule, {
   valid: [
@@ -19,7 +19,7 @@ tester.run('prevent-typeof-object', rule, {
       errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
     },
     {
-      code: 'typeof {} === `object`',
+      code: "typeof {} === 'object'",
       errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
     }
   ]

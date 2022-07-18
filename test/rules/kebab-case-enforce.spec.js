@@ -1,5 +1,5 @@
-const rule = require('../../src/rules/kebab-case-enforce');
-const tester = require('./rule-tester');
+import rule from '../../src/rules/kebab-case-enforce.js';
+import tester from './rule-tester.js';
 
 tester.run('kebab-case-enforce', rule, {
   valid: [

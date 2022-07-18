@@ -1,7 +1,7 @@
-const path = require('path');
-const RuleTester = require('eslint').RuleTester;
+import parser from '@babel/eslint-parser';
+import { RuleTester } from 'eslint';
 
-module.exports = new RuleTester({
-  parser: path.join(__dirname, '..', '..', 'node_modules', 'babel-eslint'),
+export default new RuleTester({
+  parser,
   parserOptions: {}
 });

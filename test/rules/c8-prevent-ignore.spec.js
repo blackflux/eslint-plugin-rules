@@ -1,5 +1,5 @@
-const rule = require('../../src/rules/c8-prevent-ignore');
-const tester = require('./rule-tester');
+import rule from '../../src/rules/c8-prevent-ignore.js';
+import tester from './rule-tester.js';
 
 tester.run('c8-prevent-ignore', rule, {
   valid: [
