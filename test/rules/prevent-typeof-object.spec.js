@@ -19,7 +19,7 @@ tester.run('prevent-typeof-object', rule, {
       errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
     },
     {
-      code: "typeof {} === 'object'",
+      code: 'typeof {} === `object`',
       errors: ['Please use "instanceof Object" instead of "typeof" to check for Object']
     }
   ]

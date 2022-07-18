@@ -3,5 +3,8 @@ import { RuleTester } from 'eslint';
 
 export default new RuleTester({
   parser,
-  parserOptions: {}
+  parserOptions: {},
+  env: {
+    es6: true
+  }
 });
