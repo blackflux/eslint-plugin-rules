@@ -1,5 +1,5 @@
-const rule = require('../../src/rules/prevent-typeof-object');
-const tester = require('./rule-tester');
+import rule from '../../src/rules/prevent-typeof-object.js';
+import tester from './rule-tester.js';
 
 tester.run('prevent-typeof-object', rule, {
   valid: [
