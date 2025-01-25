@@ -2,7 +2,7 @@ import path from 'path';
 
 export default {
   create: (context) => {
-    const fileName = context.getFilename();
+    const fileName = context.filename;
     const filePath = path.relative(process.cwd(), fileName);
 
     return {
