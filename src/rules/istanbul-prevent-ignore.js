@@ -1,6 +1,6 @@
 export default {
   create: (context) => {
-    const sourceCode = context.getSourceCode();
+    const sourceCode = context.sourceCode;
 
     const testComment = (node) => {
       if (node.value.startsWith(' istanbul ignore ')) {
