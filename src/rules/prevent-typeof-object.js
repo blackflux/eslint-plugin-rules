@@ -1,9 +1,10 @@
 export default {
   create(context) {
+    const sourceCode = context.sourceCode;
     return {
       UnaryExpression(node) {
         if (node.type === 'UnaryExpression' && node.operator === 'typeof') {
-          const parent = context.getAncestors().pop();
+          const parent = sourceCode.getAncestors(node).pop();
           if (parent.type === 'BinaryExpression' && ['==', '===', '!=', '!=='].includes(parent.operator)) {
             const sibling = parent.left === node ? parent.right : parent.left;
 
